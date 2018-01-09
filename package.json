@@ -1,0 +1,25 @@
+{
+  "name": "front-end-practice-page",
+  "version": "1.0.0",
+  "description": "sandbox project for practicing web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aloepwr/front-end-practice-page.git"
+  },
+  "author": "Yauheni Gunev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aloepwr/front-end-practice-page/issues"
+  },
+  "homepage": "https://github.com/Aloepwr/front-end-practice-page#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-refresh": "^1.1.0"
+  }
+}
