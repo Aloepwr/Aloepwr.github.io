@@ -1,20 +1,26 @@
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
+const livereload = require('gulp-livereload');
+const less = require('gulp-less');
+const LessAutoprefix = require('less-plugin-autoprefix');
+const LessCleanCSS = require('less-plugin-clean-css');
+
+const autoprefix = new LessAutoprefix({ browsers: ['last 2 versions', 'ie >= 10'] });
+const cleanCSS = new LessCleanCSS();
 
 
-gulp.task('prefix', () => {
-  return gulp.src('/assets/stylesheets/*.css')
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 10']
+gulp.task('less', () => {
+  return gulp.src('./assets/stylesheets/*.less')
+    .pipe(less({
+      paths: [ './assets/stylesheets' ],
+      plugins: [ autoprefix, cleanCSS ]
     }))
-    .pipe(gulp.dest('/dist'));
+    .pipe(gulp.dest('./dist/'))
+    .pipe(livereload());
 });
 
-gulp.task('minify', () => {
-  return gulp.src('/assets/stylesheets/*.css')
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('/dist'));
-});
+gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('./assets/stylesheets/*.less', gulp.series(['less']));
+})
 
-gulp.task('default', gulp.series('prefix', 'minify'));
+gulp.task('default', gulp.series('watch'));
