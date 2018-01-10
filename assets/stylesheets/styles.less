@@ -50,9 +50,22 @@ table {
 
 /* ------------------------------------------------------------ */
 
+@lightgreen: #42dad1;
+
+.white-bg-wide {
+  width: 100%;
+  background-color: #fff;
+}
+
+.grey-bg-wide {
+  width: 100%;
+  background-color: #e9e9e9;
+}
+
+
 html, body {
   height: 100%;
-  font-family: 'Montserrat', 'Nunito Sans', 'Arial', sans-serif;
+  font-family: 'Montserrat', 'Nunito Sans', Arial, sans-serif;
 }
 
 .wrapper {
@@ -65,7 +78,6 @@ html, body {
 
 .container {
   width: 90%;
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -75,25 +87,51 @@ html, body {
   align-items: center;
 }
 
+.btn-main {
+  padding: 15px 40px;
+  
+  font: bold 12px/24px 'Montserrat';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  
+  background-color: @lightgreen;
+  border: 2px solid @lightgreen;
+  
+  cursor: pointer;
+
+  &:hover, &:active, &:focus {
+    border: 2px solid @lightgreen;
+    
+    background-color: #fff;
+    color: @lightgreen;
+  }
+}
+
 header {
   background-color: #e9e9e9;
 }
 
 .navigation-top {
   padding: 35px 0;
-}
+ 
+  nav {  
+    a {
+      padding: 5px 25px;
+      
+      font: bold 12px/24px 'Montserrat';
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 1px;
+      color: #000;
 
-nav {  
-  a {
-    padding: 5px 10px;
-    
-    font: bold 12px/24px 'Montserrat';
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #000;
+      &:hover, &:active, &:focus {
+        color: @lightgreen;
+      } 
+    }
   }
 }
+
 
 main {
   background-color: #e9e9e9;
@@ -101,8 +139,84 @@ main {
 }
 
 .banner {
+  width: 500px;
+  padding: 80px 0 150px 55%;
 
+  h1 {
+    font: bold 32px/64px 'Montserrat';
+    padding-bottom: 10px;
+  }
+  p {
+    font: 18px/36px 'Nunito Sans';
+    color: #777;
+    padding-bottom: 35px;
+  }
 }
+
+.about {
+  .white-bg-wide;
+
+  section {
+    width: 50%;
+    margin: 0 auto;
+    padding: 80px 0 100px;
+
+    text-align: center;
+
+    h2 {
+      font: bold 26px/52px 'Montserrat';
+      padding-bottom: 15px;
+    }
+    p {
+      width: 80%;
+      margin: 0 auto;
+
+      font: 16px/32px 'Nunito Sans';
+      color: #777;
+    }
+  }
+}
+
+.pro-skills {
+  .grey-bg-wide;
+  
+  section {
+    width: 50%;
+    padding: 150px 80px 120px;
+
+    h2 {
+      font: bold 26px/52px 'Montserrat';
+      padding-bottom: 20px;
+    }
+    h4 {
+      font: bold 16px/32px 'Montserrat';
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+  }
+  
+  .progress-bar {
+    background-color: #dadada;
+    height: 2px;
+    padding: 1px;
+    width: 450px;
+    margin-bottom: 40px;
+  }
+  
+  .w75 {
+    background: linear-gradient(to right, @lightgreen 75%, #dadada 75%);
+  }
+  
+  .w90 {
+    background: linear-gradient(to right, @lightgreen 90%, #dadada 90%);
+  }
+  
+  .w65 {
+    background: linear-gradient(to right, @lightgreen 65%, #dadada 65%);
+  }
+}
+
+
 
 footer {
   position: absolute;
