@@ -9,12 +9,12 @@ const cleanCSS = new LessCleanCSS();
 
 
 gulp.task('less', () => {
-  return gulp.src('./assets/stylesheets/*.less')
+  return gulp.src('./assets/stylesheets/styles.less')
     .pipe(less({
       paths: [ './assets/stylesheets' ],
       plugins: [ autoprefix, cleanCSS ]
     }))
-    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./dist/css/'))
     .pipe(livereload());
 });
 
