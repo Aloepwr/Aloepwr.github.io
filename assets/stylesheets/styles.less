@@ -49,6 +49,7 @@ table {
 
 
 /* ------------------------------------------------------------ */
+
 @import './variables.less';
 @import './mixins.less';
 
@@ -58,33 +59,5 @@ table {
 
 
 html, body {
-  height: 100%;
   font-family: 'Montserrat', 'Nunito Sans', Arial, sans-serif;
-}
-
-.wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-
-  background-color: @white;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.btn-main {
-  .link-font-style;
-  .btn-border;
-  
-  padding: 15px 40px;
-  background-color: @light-green-text;
-  color: @white;
-
-  &:hover, &:active, &:focus {
-    background-color: @white;
-    color: @light-green-text;
-  }
 }

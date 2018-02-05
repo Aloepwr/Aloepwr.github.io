@@ -1,20 +1,21 @@
-header {
+.main-header {
   background-color: @light-grey-bg;
-}
+  
+  &__navigation {
+    .container;
+    .flex;
+    padding: 35px 0;
+  
+    nav {
+      a {
+        .link-font-style;
+        margin: 0 25px;
+        color: @black;
 
-.navigation-top {
-  .flex;
-  padding: 35px 0;
- 
-  nav {  
-    a {
-      .link-font-style;
-      margin: 0 25px;
-      color: @black;
-
-      &:hover, &:active, &:focus {
-        color: @light-green-text;
-      } 
+        &:hover, &:active, &:focus {
+          color: @light-green-text;
+        } 
+      }
     }
   }
 }

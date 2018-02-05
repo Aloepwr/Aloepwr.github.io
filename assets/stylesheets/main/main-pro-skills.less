@@ -1,9 +1,11 @@
 .pro-skills {
-  .grey-bg-wide;
+  .container;
   .flex;
-  height: 500px;
+  min-height: 500px;
   
   section {
+    width: 50%;
+
     h2 {
       .h2-font-style;
       padding-bottom: 20px;
@@ -14,23 +16,23 @@
       padding-bottom: 10px;
     }
   }
-  
+
   .progress-bar {
     background-color: @grey-bg;
-    height: 2px;
+    min-height: 2px;
     padding: 1px;
-    width: 450px;
+    width: 75%;
     margin-bottom: 40px;
 
-    &__ui-ux {
+    &--ui-ux {
       background: linear-gradient(to right, @light-green-text 75%, @grey-bg 75%);
     }
 
-    &__web-dev {
+    &--web-dev {
       background: linear-gradient(to right, @light-green-text 90%, @grey-bg 90%);
     }
     
-    &__marketing {
+    &--marketing {
       background: linear-gradient(to right, @light-green-text 65%, @grey-bg 65%);
       margin-bottom: 0;
     }

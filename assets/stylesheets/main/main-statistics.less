@@ -1,32 +1,29 @@
 .statistics {
   background-color: @light-green-text;
-}
-
-.statistics-flex {
-  .flex;
-  height: 200px;
-
-  section {
+  
+  &-container {
+    .container;
     .flex;
-    color: @white;
-    text-transform: uppercase;
+    min-height: 200px;
+  
+    section {
+      .flex;
+      color: @white;
+      text-transform: uppercase;
+        
+      i {
+        padding-right: 15px;
+      }
       
-    i {
-      padding-right: 15px;
-    }
-    
-    div {
-      display: block;
-    }
-    
-    h4 {
-      .h4-font-style;
-      letter-spacing: 1px;
-    }
-    
-    p {
-      .link-font-style;
-      font-weight: normal;
+      h4 {
+        .h4-font-style;
+        letter-spacing: 1px;
+      }
+      
+      p {
+        .link-font-style;
+        font-weight: normal;
+      }
     }
   }
 }

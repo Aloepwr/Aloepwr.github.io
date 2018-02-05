@@ -20,7 +20,7 @@ gulp.task('less', () => {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('./assets/stylesheets/*.less', gulp.series(['less']));
+  gulp.watch('./assets/stylesheets/**/*.less', gulp.series(['less']));
 })
 
 gulp.task('default', gulp.series('watch'));

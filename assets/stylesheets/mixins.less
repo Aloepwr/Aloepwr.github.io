@@ -1,9 +1,6 @@
-.white-bg-wide {
-  background-color: @white;
-}
-
-.grey-bg-wide {
-  background-color: @light-grey-bg;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .flex {
@@ -57,6 +54,24 @@
   letter-spacing: 1px;
 }
 
-.btn-border {
+.white-bg-wide {
+  background-color: @white;
+}
+
+.grey-bg-wide {
+  background-color: @light-grey-bg;
+}
+
+.btn-main {
+  .link-font-style;
+  
+  padding: 15px 40px;
   border: 2px solid @light-green-text;
+  background-color: @light-green-text;
+  color: @white;
+
+  &:hover, &:active, &:focus {
+    background-color: @white;
+    color: @light-green-text;
+  }
 }
