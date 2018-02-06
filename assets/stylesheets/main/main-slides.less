@@ -1,0 +1,80 @@
+.slides {
+  position: relative;
+  background-color: @light-green-text;
+  min-height: 650px;
+
+  &__quotes {
+    * {
+      user-select: none;
+    }
+    
+    input {
+      display: none;
+
+      &:checked {
+        + .slides__quote-container {
+          .slides__quote {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 1s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  &__quote {
+    .flex-column;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.7s ease-in-out;
+    
+    color: @white;
+    text-align: center;
+    
+    h1 {
+      .h1-font-style;
+      margin-bottom: 30px;
+    }
+    p {
+      .p-font-style;
+      text-transform: uppercase;
+      color: @white;
+    }
+  }
+
+  &__nav-dots {
+    position: absolute;
+    bottom: 13%;
+    width: 100%;
+    text-align: center;
+
+    &__dot {
+      position: relative;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 7px;
+      
+      border-radius: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+
+      &:hover, &:active, &:focus {
+        background-color: @white;
+      }
+    }
+  }
+}
+
+input#quote-1:checked ~ .slides__nav-dots label#quote-dot-1,
+input#quote-2:checked ~ .slides__nav-dots label#quote-dot-2,
+input#quote-3:checked ~ .slides__nav-dots label#quote-dot-3 {
+  background-color: @white;
+  box-shadow: 0 0 0 4px @white;  
+}

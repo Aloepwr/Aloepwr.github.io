@@ -1,0 +1,66 @@
+.products {
+  &__row {
+    .flex;
+    align-items: stretch;
+    min-height: 300px;
+
+    div {
+      width: 100%;
+      position: relative;
+      transition: all 0.5s ease-out;
+      
+      i {
+        display: none;
+        color: @white;
+      }
+      
+      &:hover, &:focus, &:active {
+        .flex;
+        justify-content: center;
+        opacity: 0.4;
+        background-color: @black;
+        cursor: pointer;
+        
+        i {
+          display: inline-block;
+        }
+      }
+    }
+    
+    &:first-of-type {
+      div {
+        &:nth-child(even) {
+          background-color: @white;
+
+          &:hover, &:active, &:focus {
+            background-color: @black;        
+          }
+        }
+      }
+    }
+    
+    &:last-of-type {
+      div {
+        &:nth-child(odd) {
+          background-color: @white;
+
+          &:hover, &:active, &:focus {
+            background-color: @black;        
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    .flex;
+    justify-content: center;
+    padding: 50px 0;
+    .link-font-style;
+    color: @dark-grey-text;
+
+    &:hover, &:focus, &:active {
+      color: @light-green-text;
+    }
+  }
+}
