@@ -1,29 +1,63 @@
+//
+// Main styling
+//
+
+// .statistics {
+//   .flex;
+//   justify-content: space-around;
+//   min-height: 200px;
+//   background-color: @light-green-text;
+  
+//   section {
+//     .flex;
+//     color: @white;
+//     text-transform: uppercase;
+      
+//     i {
+//       margin-right: 15px;
+//     }
+    
+//     h4 {
+//       .h4-font-style;
+//       letter-spacing: 1px;
+//     }
+    
+//     p {
+//       .link-font-style;
+//       font-weight: normal;
+//     }
+//   }
+// }
+
+//
+// Float styling
+//
+
 .statistics {
+  .clearfix;
+  padding: 60px 20px 60px 90px;
   background-color: @light-green-text;
   
-  &-container {
-    .flex;
-    justify-content: space-around;
-    min-height: 200px;
-  
-    section {
-      .flex;
-      color: @white;
-      text-transform: uppercase;
-        
-      i {
-        margin-right: 15px;
-      }
+  section {
+    float: left;
+    width: 25%;
+    color: @white;
+    text-transform: uppercase;
       
-      h4 {
-        .h4-font-style;
-        letter-spacing: 1px;
-      }
-      
-      p {
-        .link-font-style;
-        font-weight: normal;
-      }
+    i {
+      float: left;
+      margin-top: 5px;
+      margin-right: 15px;
+    }
+
+    h4 {
+      .h4-font-style;
+      letter-spacing: 1px;
+    }
+    
+    p {
+      .link-font-style;
+      font-weight: normal;
     }
   }
 }

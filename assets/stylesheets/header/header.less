@@ -1,12 +1,48 @@
+//
+// Main styling
+//
+
+// .main-header {
+//   background-color: @light-grey-bg;
+  
+//   &__navigation {
+//     .container;
+//     .flex;
+//     padding: 35px 0;
+  
+//     nav {
+//       a {
+//         .link-font-style;
+//         margin: 0 25px;
+//         color: @black;
+
+//         &:hover, &:active, &:focus {
+//           color: @light-green-text;
+//         } 
+//       }
+//     }
+//   }
+// }
+
+//
+// Float styling
+//
+
 .main-header {
   background-color: @light-grey-bg;
   
   &__navigation {
+    .clearfix;
     .container;
-    .flex;
     padding: 35px 0;
+
+    &__logo {
+      float: left;
+    }
   
     nav {
+      float: right;
+
       a {
         .link-font-style;
         margin: 0 25px;

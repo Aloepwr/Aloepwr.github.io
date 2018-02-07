@@ -1,10 +1,61 @@
+//
+// Main styling
+//
+
+// .pro-skills {
+//   .container;
+//   .flex;
+//   min-height: 600px;
+  
+//   section {
+//     width: 50%;
+
+//     h1 {
+//       .h1-font-style;
+//       margin-bottom: 20px;
+//     }
+//     h4 {
+//       .h4-font-style;
+//       text-transform: uppercase;
+//       margin-bottom: 10px;
+//     }
+//   }
+
+//   .progress-bar {
+//     background-color: @grey-bg;
+//     min-height: 2px;
+//     padding: 1px;
+//     width: 70%;
+//     margin-bottom: 40px;
+
+//     &--ui-ux {
+//       background: linear-gradient(to right, @light-green-text 75%, @grey-bg 75%);
+//     }
+
+//     &--web-dev {
+//       background: linear-gradient(to right, @light-green-text 90%, @grey-bg 90%);
+//     }
+    
+//     &--marketing {
+//       background: linear-gradient(to right, @light-green-text 65%, @grey-bg 65%);
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+//
+// Float + transform: translateY styling
+//
+
 .pro-skills {
+  .clearfix;
   .container;
-  .flex;
   min-height: 600px;
   
   section {
     width: 50%;
+    float: left;
+    transform: translateY(50%);
 
     h1 {
       .h1-font-style;
