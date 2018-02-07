@@ -82,3 +82,15 @@
     color: @light-green-text;
   }
 }
+
+.footer-link-style {
+  .p-font-style;
+  line-height: 25px;
+  color: lighten(@dark-grey-text, 20%);
+  text-decoration: none;
+
+  &:hover, &:active, &:focus {
+    color: @white;
+    text-decoration: underline;
+  }
+}

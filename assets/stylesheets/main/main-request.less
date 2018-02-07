@@ -1,0 +1,59 @@
+.request {
+  padding: 80px 0;
+  
+  &__title {
+    width: 50%;
+    margin: 0 auto 30px;
+    text-align: center;
+
+    h1 {
+      .h1-font-style;
+      margin-bottom: 10px;
+    }
+    p {
+      .p-font-style;
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    form {
+      width: 50%;
+      margin: 0 auto;
+
+      * {
+        box-sizing: border-box;
+      }
+
+      input, textarea {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 30px;
+        border: 0;
+        font-family: inherit;
+      }
+
+      section {
+        .flex;
+
+        input {
+          width: 48%;
+        }
+      }
+
+      textarea {
+        min-height: 150px;
+        resize: none;
+      }
+
+      input[type="submit"] {
+        .btn-main;
+        width: auto;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
