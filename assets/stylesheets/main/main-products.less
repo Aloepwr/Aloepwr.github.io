@@ -1,13 +1,90 @@
+//
+// Main styling
+//
+
+// .products {
+//   &__row {
+//     .flex;
+//     align-items: stretch;
+//     min-height: 300px;
+
+//     div {
+//       width: 100%;
+
+//       i {
+//         display: none;
+//         color: @white;
+//       }
+
+//       &:hover, &:focus, &:active {
+//         .flex;
+//         justify-content: center;
+//         background-color: @black;
+//         opacity: 0.4;
+//         cursor: pointer;
+//         transition: all 0.5s ease-out;
+        
+//         i {
+//           display: inline-block;
+//         }
+//       }
+//     }
+    
+//     &:first-of-type {
+//       div {
+//         &:nth-child(even) {
+//           background-color: @white;
+
+//           &:hover, &:active, &:focus {
+//             background-color: @black;        
+//           }
+//         }
+//       }
+//     }
+    
+//     &:last-of-type {
+//       div {
+//         &:nth-child(odd) {
+//           background-color: @white;
+
+//           &:hover, &:active, &:focus {
+//             background-color: @black;        
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &__link {
+//     .flex;
+//     justify-content: center;
+//     padding: 50px 0;
+//     .link-font-style;
+//     color: @dark-grey-text;
+
+//     &:hover, &:focus, &:active {
+//       color: @light-green-text;
+//     }
+//   }
+// }
+
+
+//
+// Float styling
+//
+
 .products {
+  .clearfix;
+
   &__row {
-    .flex;
-    align-items: stretch;
+    width: 100%;
     min-height: 300px;
 
     div {
-      width: 100%;
+      float: left;
+      width: 25%;
+      min-height: 300px;
       position: relative;
-      transition: all 0.5s ease-out;
       
       i {
         display: none;
@@ -15,14 +92,17 @@
       }
       
       &:hover, &:focus, &:active {
-        .flex;
-        justify-content: center;
-        opacity: 0.4;
         background-color: @black;
+        opacity: 0.4;
         cursor: pointer;
+        transition: all 0.5s ease-out;
         
         i {
           display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
     }
@@ -53,11 +133,11 @@
   }
 
   &__link {
-    .flex;
-    justify-content: center;
+    display: block;
     padding: 50px 0;
     .link-font-style;
     color: @dark-grey-text;
+    text-align: center;
 
     &:hover, &:focus, &:active {
       color: @light-green-text;
